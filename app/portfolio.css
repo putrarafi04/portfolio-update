@@ -5,7 +5,20 @@
   color: #e2e8f0;
   line-height: 1.6;
   overflow-x: hidden;
-  background: #09090b;
+  position: relative;
+  min-height: 100vh;
+  /* Fixed full-cover page background + dark overlay for readability */
+  background-image: linear-gradient(
+      180deg,
+      rgba(9, 9, 11, 0.62) 0%,
+      rgba(9, 9, 11, 0.68) 50%,
+      rgba(9, 9, 11, 0.72) 100%
+    ),
+    url("/hero-bg.jpg");
+  background-size: cover, cover;
+  background-position: center, center;
+  background-repeat: no-repeat, no-repeat;
+  background-attachment: fixed, fixed;
   font-family: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
 }
 .pf a {
@@ -131,18 +144,20 @@
   background-image: url("/hero-bg.jpg");
   background-size: cover;
   background-position: center 40%;
+  background-attachment: fixed;
   background-repeat: no-repeat;
 }
-/* Dark overlay so every word stays readable on the photo */
+/* Lighter overlay in the hero so the photo reads clearly here,
+   while keeping the headline and subtitle legible */
 .hero::before {
   content: "";
   position: absolute;
   inset: 0;
   background: linear-gradient(
     180deg,
-    rgba(9, 9, 11, 0.78) 0%,
-    rgba(9, 9, 11, 0.62) 45%,
-    rgba(9, 9, 11, 0.82) 100%
+    rgba(9, 9, 11, 0.62) 0%,
+    rgba(9, 9, 11, 0.42) 45%,
+    rgba(9, 9, 11, 0.72) 100%
   );
   z-index: 0;
 }
@@ -241,7 +256,9 @@
 }
 .slider-viewport {
   position: relative;
-  background: #18181b;
+  background: rgba(24, 24, 27, 0.72);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
   border: 1px solid rgba(255, 85, 0, 0.2);
   border-left: 4px solid #ff5500;
   border-radius: 8px;
@@ -338,8 +355,10 @@
   gap: 20px;
 }
 .tool-card {
-  background: #18181b;
-  border: 1px solid rgba(255, 255, 255, 0.05);
+  background: rgba(24, 24, 27, 0.7);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
   padding: 25px;
   border-radius: 8px;
   transition: all 0.3s ease;
@@ -385,7 +404,9 @@
 .brand-card {
   flex: 0 0 calc(25% - 15px);
   min-width: 250px;
-  background: #18181b;
+  background: rgba(24, 24, 27, 0.72);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
   border: 1px solid rgba(255, 85, 0, 0.15);
   border-top: 3px solid #ff5500;
   padding: 30px;
@@ -460,7 +481,9 @@
 .ticker-card {
   width: 320px;
   flex-shrink: 0;
-  background-color: #18181b;
+  background-color: rgba(24, 24, 27, 0.72);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
   border: 1px solid #27272a;
   border-radius: 14px;
   padding: 28px;
@@ -660,7 +683,9 @@
   }
 }
 .campaign-card {
-  background: #18181b;
+  background: rgba(24, 24, 27, 0.72);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
   border: 1px solid rgba(255, 255, 255, 0.06);
   border-top: 4px solid var(--accent, var(--pa-c1));
   border-radius: 14px;
@@ -807,8 +832,10 @@
   margin-top: 40px;
 }
 .contact-card {
-  background: #18181b;
-  border: 1px solid rgba(255, 255, 255, 0.05);
+  background: rgba(24, 24, 27, 0.72);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
   padding: 25px;
   border-radius: 8px;
   text-decoration: none;
@@ -880,7 +907,9 @@
 
 /* Footer */
 .pf-footer {
-  background-color: #09090b;
+  background-color: rgba(9, 9, 11, 0.65);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
   border-top: 1px solid rgba(255, 85, 0, 0.1);
   color: #71717a;
   text-align: center;
