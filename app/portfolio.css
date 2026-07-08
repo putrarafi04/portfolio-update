@@ -232,19 +232,187 @@
   margin: 0 auto 45px;
 }
 
-/* About banner */
-.about-banner-section {
+/* About 3D banner */
+.about3d-section {
   max-width: 1200px;
   margin: 90px auto 0;
   padding: 0 20px;
+  perspective: 1200px;
 }
-.about-banner {
-  width: 100%;
+.about3d-header {
+  display: grid;
+  grid-template-columns: 1fr 1.15fr;
+  gap: 30px;
+  align-items: center;
+  margin-bottom: 26px;
+}
+.about3d-title {
+  font-size: clamp(52px, 9vw, 104px);
+  font-weight: 900;
+  line-height: 0.9;
+  letter-spacing: -2px;
+  margin: 0;
+  background: linear-gradient(45deg, #ff8c00, #ff5500 55%, #ffb347);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  filter: drop-shadow(0 8px 24px rgba(255, 85, 0, 0.28));
+}
+
+/* Tilt card mechanics */
+.tilt-card {
+  transform-style: preserve-3d;
+  transform: perspective(900px) rotateX(var(--rx, 0deg)) rotateY(var(--ry, 0deg));
+  transition: transform 0.25s cubic-bezier(0.22, 0.9, 0.24, 1);
+  will-change: transform;
+}
+.tilt-card-inner {
+  position: relative;
+  height: 100%;
   border-radius: 16px;
-  border: 1px solid rgba(255, 85, 0, 0.18);
-  box-shadow: 0 24px 60px -24px rgba(0, 0, 0, 0.7);
-  display: block;
-  height: auto;
+  background: rgba(24, 24, 27, 0.72);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 24px 60px -28px rgba(0, 0, 0, 0.8);
+  overflow: hidden;
+}
+/* Glossy light that follows the cursor */
+.tilt-card-inner::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    340px circle at var(--mx, 50%) var(--my, 50%),
+    rgba(255, 140, 0, 0.16),
+    transparent 60%
+  );
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+}
+.tilt-card:hover .tilt-card-inner::after {
+  opacity: 1;
+}
+
+.about3d-intro .tilt-card-inner {
+  padding: 30px 32px;
+  border-left: 4px solid #ff5500;
+}
+.about3d-intro p {
+  margin: 0;
+  font-size: 16px;
+  line-height: 1.8;
+  color: #e2e8f0;
+}
+.about3d-intro strong {
+  color: #ff8c00;
+  font-weight: 600;
+}
+
+.about3d-stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+  margin-bottom: 26px;
+}
+.stat3d-card .tilt-card-inner {
+  padding: 26px 22px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  border-top: 3px solid #ff5500;
+}
+.stat3d-value {
+  font-size: 44px;
+  font-weight: 900;
+  line-height: 1;
+  color: #ff8c00;
+  transform: translateZ(40px);
+}
+.stat3d-label {
+  font-size: 14px;
+  color: #cbd5e1;
+  transform: translateZ(20px);
+}
+
+.about3d-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+}
+.info3d-card .tilt-card-inner {
+  padding: 26px 24px;
+}
+.info3d-title {
+  font-size: 18px;
+  font-weight: 800;
+  color: #ff8c00;
+  margin: 0 0 16px;
+  letter-spacing: 0.3px;
+  transform: translateZ(30px);
+}
+.info3d-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  transform: translateZ(18px);
+}
+.info3d-list li {
+  position: relative;
+  padding-left: 20px;
+  font-size: 14.5px;
+  color: #e2e8f0;
+  line-height: 1.5;
+}
+.info3d-list li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 8px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #ff5500;
+}
+.info3d-list--lang li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
+.lang3d-level {
+  font-size: 12px;
+  font-weight: 600;
+  color: #ff8c00;
+  background: rgba(255, 85, 0, 0.12);
+  border: 1px solid rgba(255, 85, 0, 0.25);
+  padding: 3px 10px;
+  border-radius: 999px;
+  white-space: nowrap;
+}
+
+@media (max-width: 860px) {
+  .about3d-header {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+  .about3d-stats {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .about3d-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .tilt-card {
+    transform: none !important;
+    transition: none !important;
+  }
 }
 
 /* About slider */
