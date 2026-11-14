@@ -7,6 +7,7 @@ import { AboutBanner } from "@/components/portfolio/about-banner"
 import { AboutSlider } from "@/components/portfolio/about-slider"
 import { Tools } from "@/components/portfolio/tools"
 import { Brands } from "@/components/portfolio/brands"
+import { BrandExperiences } from "@/components/portfolio/brand-experiences"
 import { CampaignTicker } from "@/components/portfolio/campaign-ticker"
 import { ProjectAvailable } from "@/components/portfolio/project-available"
 import { ResumeSummary } from "@/components/portfolio/resume-summary"
@@ -35,6 +36,7 @@ export default function Page() {
         <AboutSlider />
         <Tools />
         <Brands />
+        <BrandExperiences />
         <CampaignTicker />
         <ProjectAvailable
           ref={projectRef}
