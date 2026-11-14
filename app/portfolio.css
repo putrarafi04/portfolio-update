@@ -1262,22 +1262,18 @@ button:active, .btn:active, .nav-cta:active, .resume-toggle:active { transform: 
 }
 @media (max-width: 420px) { .nav-cta { display: none; } .hero { padding-top: 150px; } .section-title { font-size: 30px; } }
 
-.brand-experiences-section { max-width: 1200px; margin: 100px auto 40px; padding: 0 20px; scroll-margin-top: 100px; }
-.brand-experiences-heading { margin-bottom: 28px; }
-.brand-experiences-heading .section-title { margin-bottom: 0; }
-.brand-experience-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 22px; }
+.brand-experience-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 22px; margin: 24px 0 32px; }
 .brand-experience-card { padding: 28px; border: 1px solid rgba(255,255,255,.09); border-radius: 16px; background: rgba(24,24,27,.78); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); box-shadow: 0 18px 48px rgba(0,0,0,.2); }
 .brand-experience-card--zena { border-top: 3px solid #ff8c00; }
 .brand-experience-card--dwi { border-top: 3px solid #37b3c8; }
 .brand-experience-kicker { color: #ffb347; font-size: 11px; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; }
 .brand-experience-card--dwi .brand-experience-kicker { color: #65d2e2; }
-.brand-experience-card h3 { margin: 12px 0 14px; color: #fff; font-size: clamp(22px, 3vw, 30px); line-height: 1.2; }
-.brand-experience-headline { margin: 0 0 14px; color: #ffb347; font-size: 17px; font-weight: 750; line-height: 1.5; }
-.brand-experience-card--dwi .brand-experience-headline { color: #8de0eb; }
-.brand-experience-description { margin: 0 0 14px; color: #cbd5e1; font-size: 14px; line-height: 1.7; }
-.brand-experience-card ul { display: grid; gap: 10px; margin: 0; padding: 0; list-style: none; }
+.brand-experience-card h3 { margin: 12px 0 20px; color: #fff; font-size: clamp(22px, 3vw, 30px); line-height: 1.2; }
+.brand-experience-card ul { display: grid; gap: 14px; margin: 0; padding: 0; list-style: none; }
 .brand-experience-card li { position: relative; padding-left: 20px; color: #e2e8f0; font-size: 14px; line-height: 1.6; }
+.brand-experience-card li strong { color: #ffb347; font-weight: 750; }
+.brand-experience-card--dwi li strong { color: #8de0eb; }
 .brand-experience-card li::before { position: absolute; top: .55em; left: 0; width: 7px; height: 7px; border-radius: 50%; background: #ff8c00; content: ""; }
 .brand-experience-card--dwi li::before { background: #65d2e2; }
 .whatsapp-cta { display: inline-flex; margin: 0 auto 20px; }
-@media (max-width: 760px) { .brand-experience-grid { grid-template-columns: 1fr; gap: 16px; } .brand-experience-card { padding: 22px; } .brand-experiences-section { margin-top: 76px; } }
+@media (max-width: 760px) { .brand-experience-grid { grid-template-columns: 1fr; gap: 16px; margin: 20px 0 28px; } .brand-experience-card { padding: 22px; } }
