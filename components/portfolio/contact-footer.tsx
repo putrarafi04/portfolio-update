@@ -4,7 +4,10 @@ import { Reveal } from "./reveal"
 
 export function PortfolioResume() {
   return (
-    <section id="resume" className="contact-section portfolio-resources" aria-label="Portfolio resources">
+    <section id="resume" className="contact-section portfolio-resources" aria-labelledby="achievement-title">
+      <Reveal as="h2" id="achievement-title" className="section-title portfolio-resources-title">
+        Achievement
+      </Reveal>
       <Reveal className="contact-grid portfolio-resource-grid">
         <a
           href="https://drive.google.com/file/d/1LxNAZjNygKWqKSyvkg24a42xHU0VDma9/view?usp=sharing"
