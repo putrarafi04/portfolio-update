@@ -276,7 +276,7 @@ export const projectServices = [
   },
   {
     badge: "Web Dev",
-    title: "WordPress & HTML Developer",
+    title: "Full-Stack Developer",
     desc: "Creating and managing websites and landing pages, implementing content updates, optimizing user experience, and supporting digital marketing initiatives through responsive web development.",
     metrics: ["🌐 Responsive", "⚡ Speed Opt"],
     subject: "WordPress Development",
@@ -318,7 +318,7 @@ export const projectServices = [
     badge: "Career",
     title: "Business Intelligence",
     desc: "Transforming complex marketing and business data into visual reports and strategic recommendations that improve decision-making and business performance.",
-    metrics: ["📑 ATS Friendly", "👔 Career Growth"],
+    metrics: ["⚙️ Automation", "📊 Analytics"],
     subject: "Resume Optimization",
     body: "Hi Rafi, I want to optimize my resume to pass ATS filters and stand out.",
   },
