@@ -4,13 +4,13 @@ import { Reveal } from "./reveal"
 
 export function PortfolioResume() {
   return (
-    <section id="portfolio" className="contact-section">
-      <Reveal className="contact-grid">
+    <section id="resume" className="contact-section portfolio-resources" aria-label="Portfolio resources">
+      <Reveal className="contact-grid portfolio-resource-grid">
         <a
           href="https://drive.google.com/file/d/1LxNAZjNygKWqKSyvkg24a42xHU0VDma9/view?usp=sharing"
           target="_blank"
           rel="noopener noreferrer"
-          className="contact-card"
+          className="contact-card portfolio-resource-card"
         >
           <h4>Summary Portfolio</h4>
         </a>
@@ -18,7 +18,7 @@ export function PortfolioResume() {
           href="https://drive.google.com/file/d/1ShpLOoP1WZEijS03B53Au76ZvDoWhjP-/view?usp=sharing"
           target="_blank"
           rel="noopener noreferrer"
-          className="contact-card"
+          className="contact-card portfolio-resource-card"
         >
           <h4>Resume</h4>
         </a>

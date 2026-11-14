@@ -137,6 +137,16 @@ export const toolCategories = [
 
 export const brands = [
   {
+    name: "ZENA Intelligence",
+    detail:
+      "Acquired 15+ B2B clients, generated IDR 40M+ in monthly sales, drove 10,000+ website clicks, and secured 75+ qualified prospects.",
+  },
+  {
+    name: "PT Dwi Aero Buana",
+    detail:
+      "Developed and deployed an 18-page corporate website, integrated the company’s custom domain through Vercel, and configured DNS while preserving company email, webmail, and cPanel access.",
+  },
+  {
     name: "Noni Abon",
     detail:
       "Increased marketplace sales performance by generating 1,031 purchases, achieving a 14% conversion rate, and contributing over IDR 103 million in revenue through Shopee Ads, Tokopedia Ads, TikTok Ads, and campaign optimization.",

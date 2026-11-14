@@ -9,7 +9,6 @@ import { Tools } from "@/components/portfolio/tools"
 import { Brands } from "@/components/portfolio/brands"
 import { CampaignTicker } from "@/components/portfolio/campaign-ticker"
 import { ProjectAvailable } from "@/components/portfolio/project-available"
-import { ResumeSummary } from "@/components/portfolio/resume-summary"
 import { PortfolioResume, Contact, PortfolioFooter } from "@/components/portfolio/contact-footer"
 
 export default function Page() {
@@ -41,7 +40,6 @@ export default function Page() {
           open={projectsOpen}
           onToggle={() => setProjectsOpen((o) => !o)}
         />
-        <ResumeSummary />
         <PortfolioResume />
         <Contact />
       </main>

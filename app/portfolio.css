@@ -1262,18 +1262,10 @@ button:active, .btn:active, .nav-cta:active, .resume-toggle:active { transform: 
 }
 @media (max-width: 420px) { .nav-cta { display: none; } .hero { padding-top: 150px; } .section-title { font-size: 30px; } }
 
-.brand-experience-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 22px; margin: 24px 0 32px; }
-.brand-experience-card { padding: 28px; border: 1px solid rgba(255,255,255,.09); border-radius: 16px; background: rgba(24,24,27,.78); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); box-shadow: 0 18px 48px rgba(0,0,0,.2); }
-.brand-experience-card--zena { border-top: 3px solid #ff8c00; }
-.brand-experience-card--dwi { border-top: 3px solid #37b3c8; }
-.brand-experience-kicker { color: #ffb347; font-size: 11px; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; }
-.brand-experience-card--dwi .brand-experience-kicker { color: #65d2e2; }
-.brand-experience-card h3 { margin: 12px 0 20px; color: #fff; font-size: clamp(22px, 3vw, 30px); line-height: 1.2; }
-.brand-experience-card ul { display: grid; gap: 14px; margin: 0; padding: 0; list-style: none; }
-.brand-experience-card li { position: relative; padding-left: 20px; color: #e2e8f0; font-size: 14px; line-height: 1.6; }
-.brand-experience-card li strong { color: #ffb347; font-weight: 750; }
-.brand-experience-card--dwi li strong { color: #8de0eb; }
-.brand-experience-card li::before { position: absolute; top: .55em; left: 0; width: 7px; height: 7px; border-radius: 50%; background: #ff8c00; content: ""; }
-.brand-experience-card--dwi li::before { background: #65d2e2; }
 .whatsapp-cta { display: inline-flex; margin: 0 auto 20px; }
-@media (max-width: 760px) { .brand-experience-grid { grid-template-columns: 1fr; gap: 16px; margin: 20px 0 28px; } .brand-experience-card { padding: 22px; } }
+.portfolio-resources { max-width: 800px; margin: 48px auto 60px; }
+.portfolio-resource-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); margin-top: 0; }
+.portfolio-resource-card { display: flex; min-height: 112px; align-items: center; justify-content: center; border-top: 3px solid #ff5500; border-radius: 12px; background: rgba(24, 24, 27, 0.78); }
+.portfolio-resource-card h4 { margin: 0; color: #ff8c00; font-size: 19px; }
+.portfolio-resource-card:hover { transform: translateY(-4px); border-color: #ff5500; box-shadow: 0 10px 28px rgba(255, 85, 0, 0.14); }
+@media (max-width: 560px) { .portfolio-resources { margin: 36px auto 48px; } .portfolio-resource-grid { grid-template-columns: 1fr; gap: 14px; } }

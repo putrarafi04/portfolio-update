@@ -3,7 +3,6 @@
 import { useCallback, useEffect, useLayoutEffect, useRef, useState } from "react"
 import { Reveal } from "./reveal"
 import { brands } from "./data"
-import { BrandExperiences } from "./brand-experiences"
 
 export function Brands() {
   const trackRef = useRef<HTMLDivElement>(null)
@@ -61,8 +60,6 @@ export function Brands() {
       <Reveal as="h2" className="section-title">
         Brands Experience
       </Reveal>
-      <BrandExperiences />
-
       <Reveal as="p" className="section-subtitle" delay={1}>
         Use arrows to navigate. Click on any brand to view campaign details.
       </Reveal>
