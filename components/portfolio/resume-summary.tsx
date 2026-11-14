@@ -19,9 +19,7 @@ export function ResumeSummary() {
     <Reveal as="section" id="resume" className="resume-section" aria-labelledby="resume-title">
       <div className="resume-heading-row">
         <div>
-          <p className="eyebrow">Summary portfolio & resume</p>
-          <h2 id="resume-title" className="section-title resume-title">Experience that moves growth</h2>
-          <p className="section-subtitle resume-subtitle">A concise view of Rafi&apos;s ecommerce operations, performance marketing, and data analytics background.</p>
+          <h2 id="resume-title" className="section-title resume-title">Summary Portfolio</h2>
         </div>
         <a className="btn btn-solid resume-download" href="/Rafi-Fadhila-Putra-Resume.pdf" download>Download resume</a>
       </div>
